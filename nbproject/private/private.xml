@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/searchObject.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/entity/Item.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/register.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/home.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/login.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/AdminServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/LoginServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/entity/User.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/adminManage.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/service/ItemService.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/AddItem.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/WEB-INF/web.xml</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/SearchServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RegisterServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/SettingsServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/confirmationDeleteItem.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/LogoutServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RemoveItem.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/ItemDao.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/jpa/JpaUserDao.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/service/UserService.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/addObject.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/settings.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/filter/AuthentificationFilter.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/UserDao.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/jpa/JpaItemDao.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/HomeServlet.java</file>
+        </group>
+    </open-files>
+</project-private>
