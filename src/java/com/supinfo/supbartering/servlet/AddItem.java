@@ -8,6 +8,7 @@ package com.supinfo.supbartering.servlet;
 import com.supinfo.supbartering.entity.Item;
 import com.supinfo.supbartering.entity.User;
 import com.supinfo.supbartering.service.ItemService;
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
@@ -20,6 +21,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
+import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 /**
  *
@@ -104,6 +107,18 @@ public class AddItem extends HttpServlet {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
 
+        /*
+        Boolean isMultipart = ServletFileUpload.isMultipartContent(request);
+        if ( isMultipart ) {
+            DiskFileItemFactory factory = new DiskFileItemFactory();
+            factory.setSizeThreshold(4 * 1024);
+            factory.setRepository(new File("\tmp"));
+            ServletFileUpload upload = new ServletFileUpload(factory);
+            upload.setSizeMax(50 * 1024);
+            
+        }
+        */
+        
         if ( nameObject != null 
                 && descriptionObject != null 
                 && typeObject != null
