@@ -107,7 +107,6 @@ public class AddItem extends HttpServlet {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
 
-        /*
         Boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if ( isMultipart ) {
             DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -117,7 +116,6 @@ public class AddItem extends HttpServlet {
             upload.setSizeMax(50 * 1024);
             
         }
-        */
         
         if ( nameObject != null 
                 && descriptionObject != null 

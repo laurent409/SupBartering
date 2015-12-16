@@ -41,7 +41,7 @@
         </nav>
         <div class="container">
             <a href="${pageContext.servletContext.contextPath}/admin"><span class="glyphicon glyphicon-hand-left" style="max-width: 330px; padding-top: 10%; padding-left: 2%; margin: 0 auto;"> Back</span></a>
-            <form method="POST" class="form-signin" style="max-width: 330px; padding: 4%; margin: 0 auto;">
+            <form action="AddItem" method="POST" class="form-signin" style="max-width: 330px; padding: 4%; margin: 0 auto;" enctype="multipart/form-data">
                 <h2 class="form-signin-heading">Add your own item !</h2>
                 <label for="name" class="sr-only">Name</label>
                 <input type="text" class="form-control" id="name" name="name" value="" placeholder="name" required/>
