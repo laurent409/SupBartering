@@ -77,7 +77,8 @@ public class HomeServlet extends HttpServlet {
         }
 
         if ( session.getAttribute("user") == null ) {
-            //Integer numberOfUsers = userService.countNumberOfUser();
+            //Long numberOfUsers = userService.countNumberOfUser();
+            //int numberOfUsers = userService.getAllUsers().size();
             List<Item> allItems = itemService.getAllItems();
             //request.setAttribute("numberOfUsers", numberOfUsers);
             request.setAttribute("items", allItems);

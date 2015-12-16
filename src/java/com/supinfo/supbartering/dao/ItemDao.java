@@ -19,4 +19,5 @@ public interface ItemDao {
     public List<Item> getAllItems();
     public List<Item> getItemsFromUser(Long idCreator);
     public List<Item> searchItemByString(String searchLikeThis);
+    public Long countNumberOfItems();
 }

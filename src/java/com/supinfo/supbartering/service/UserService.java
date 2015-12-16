@@ -7,6 +7,7 @@ package com.supinfo.supbartering.service;
 
 import com.supinfo.supbartering.dao.UserDao;
 import com.supinfo.supbartering.entity.User;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
@@ -40,8 +41,12 @@ public class UserService {
         return userDao.getUserConnection(username, password);
     }
     
-    public Integer countNumberOfUser() {
+    public Long countNumberOfUser() {
         return userDao.countNumberOfUser();
+    }
+    
+    public List<User> getAllUsers() {
+        return userDao.getAllUsers();
     }
     
 }
