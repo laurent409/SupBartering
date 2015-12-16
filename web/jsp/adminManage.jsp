@@ -67,11 +67,24 @@
                     <tbody>
                     <c:forEach items="${allItems}" var="item">
                         <tr>
-                            <td><c:out value="${item.name}"/></td>
-                            <td><c:out value="${item.description}"/></td>
-                            <td><c:out value="€${item.price}"/></td>
-                            <td><c:out value="${item.type}"/></td>
-                            <td><c:out value="${item.dateCreation}"/></td>
+                            <td>
+                                <a href="${pageContext.servletContext.contextPath}/admin/item-details?idItem=${item.id}">
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                </a>
+                                <c:out value="${item.name}"/>                            
+                            </td>
+                            <td>
+                                <c:out value="${item.description}"/>
+                            </td>
+                            <td>
+                                <c:out value="€${item.price}"/>
+                            </td>
+                            <td>
+                                <c:out value="${item.type}"/>
+                            </td>
+                            <td>
+                                <c:out value="${item.dateCreation}"/>
+                            </td>
                         </tr>
                     </c:forEach>                    
                     </tbody>
@@ -99,13 +112,33 @@
                         <c:url value="/admin/delete-confirmation?idItem=${item.id}" var="deleteItem">
                             <c:param name="idItem" value="${item.id}"/>
                         </c:url>
+                        <c:url value="/admin/item-details?idItem=${item.id}" var="detailsItem">
+                            <c:param name="idItem" value="${item.id}"/>
+                        </c:url>                        
                         <tr>
-                            <td><c:out value="${item.name}"/></td>
-                            <td><c:out value="${item.description}"/></td>
-                            <td><c:out value="€${item.price}"/></td>
-                            <td><c:out value="${item.type}"/></td>
-                            <td><c:out value="${item.dateCreation}"/></td>
-                            <td><a href="${pageContext.servletContext.contextPath}/admin/delete?idItem=${item.id}"><span class="glyphicon glyphicon-trash"</span></a></td>
+                            <td>
+                                <a href="${pageContext.servletContext.contextPath}/admin/item-details?idItem=${item.id}">
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                </a>
+                                <c:out value="${item.name}"/>                            
+                            </td>
+                            <td>
+                                <c:out value="${item.description}"/>
+                            </td>
+                            <td>
+                                <c:out value="€${item.price}"/>
+                            </td>
+                            <td>
+                                <c:out value="${item.type}"/>
+                            </td>
+                            <td>
+                                <c:out value="${item.dateCreation}"/>
+                            </td>
+                            <td>
+                                <a href="${pageContext.servletContext.contextPath}/admin/delete?idItem=${item.id}">
+                                    <span class="glyphicon glyphicon-trash"</span>
+                                </a>
+                            </td>
                         </tr>
                     </c:forEach>       
                     </tbody>

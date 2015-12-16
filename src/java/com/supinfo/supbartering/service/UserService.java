@@ -32,6 +32,9 @@ public class UserService {
         return userDao.findUserById(idUser);
     }
     
+    public User finUserByUsername(String username) {
+        return userDao.findUserByUsername(username);
+    }
     
     public User getUserConnection (String username, String password) {
         return userDao.getUserConnection(username, password);

@@ -19,11 +19,13 @@
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RegisterServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/SettingsServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/confirmationDeleteItem.jsp</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/resource/SearchItemResource.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/LogoutServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RemoveItem.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/ItemDao.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/jpa/JpaUserDao.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/service/UserService.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/resource/ListItemResource.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/addObject.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/settings.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/filter/AuthentificationFilter.java</file>

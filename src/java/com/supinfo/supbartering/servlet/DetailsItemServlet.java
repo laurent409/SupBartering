@@ -15,18 +15,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author Laurent
  */
-@WebServlet(name = "RemoveItem", urlPatterns = {"/admin/delete"})
-public class RemoveItem extends HttpServlet {
+@WebServlet(name = "DetailsItemServlet", urlPatterns = {"/admin/item-details"})
+public class DetailsItemServlet extends HttpServlet {
 
     @EJB
     private ItemService itemService;
-    
+
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -44,10 +43,10 @@ public class RemoveItem extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet RemoveItem</title>");            
+            out.println("<title>Servlet DetailsItemServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet RemoveItem at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet DetailsItemServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -67,10 +66,11 @@ public class RemoveItem extends HttpServlet {
             throws ServletException, IOException {
         //processRequest(request, response);
         Long idItem = Long.parseLong(request.getParameter("idItem"));
-        Item itemToDelete = itemService.findItemById(idItem);
-        request.setAttribute("itemToDelete", itemToDelete);
-        this.getServletContext().getRequestDispatcher("/jsp/confirmationDeleteItem.jsp").forward(request, response);
-}
+        Item itemDetails = itemService.findItemById(idItem);
+        request.setAttribute("itemDetails", itemDetails);
+        this.getServletContext().getRequestDispatcher("/jsp/detailsObject.jsp").forward(request, response);
+        
+    }
 
     /**
      * Handles the HTTP <code>POST</code> method.
@@ -84,22 +84,6 @@ public class RemoveItem extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
-        String searchLikeThis = request.getParameter("searchLikeThis");
-        if (searchLikeThis != null) {
-            //List<Item> foundItems = itemService.searchItemByString(searchLikeThis);
-            request.setAttribute("search", searchLikeThis);
-            response.sendRedirect(getServletContext().getContextPath() + "/search?search="+searchLikeThis);
-            return;
-        }
-        String sItemToBeDeleted = request.getParameter("itemToDeleteConfirmated");
-        if ( sItemToBeDeleted != null ) {
-            Long itemToDeleteConfirmated = Long.parseLong(request.getParameter("itemToDeleteConfirmated"));
-            if ( itemToDeleteConfirmated != 0 ) {
-                Item itemToDelete = itemService.findItemById(itemToDeleteConfirmated);
-                itemService.deleteItem(itemToDelete);
-            }
-        }
-        response.sendRedirect(getServletContext().getContextPath() + "/admin");        
     }
 
     /**
