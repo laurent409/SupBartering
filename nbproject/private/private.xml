@@ -11,6 +11,7 @@
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/login.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/AdminServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/LoginServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/build/generated-sources/ap-source-output/com/supinfo/supbartering/entity/User_.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/entity/User.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/DetailsItemServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/adminManage.jsp</file>
@@ -22,6 +23,7 @@
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/SettingsServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/confirmationDeleteItem.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/resource/SearchItemResource.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/build/generated-sources/ap-source-output/com/supinfo/supbartering/entity/Item_.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/LogoutServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RemoveItem.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/ItemDao.java</file>

@@ -7,6 +7,7 @@ package com.supinfo.supbartering.dao.jpa;
 
 import com.supinfo.supbartering.dao.UserDao;
 import com.supinfo.supbartering.entity.User;
+import com.supinfo.supbartering.entity.User_;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;

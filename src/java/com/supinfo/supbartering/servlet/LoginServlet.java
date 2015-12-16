@@ -95,11 +95,13 @@ public class LoginServlet extends HttpServlet {
         if ( usernameLogin != null && passwordUser != null ) 
            user = userService.getUserConnection(usernameLogin, passwordUser);
         
-        if (user.getId() != null) {
-            HttpSession session = request.getSession();
-            session.setAttribute("user", user);
-            response.sendRedirect(getServletContext().getContextPath() + "/admin");        
-        } else {
+        try {
+            if (user.getId() != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("user", user);
+                response.sendRedirect(getServletContext().getContextPath() + "/admin");        
+            }
+        } catch (Exception e) {
             this.getServletContext().getRequestDispatcher("/jsp/login.jsp").forward(request, response);
         }
     }
