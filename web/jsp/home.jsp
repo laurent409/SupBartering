@@ -38,6 +38,8 @@
                 <br>
                 <h1>Welcome to SupBartering ! <span class="glyphicon glyphicon-shopping-cart"></span></h1>
                 <p>SupBartering is a new way for selling off all items ! </p>
+                <c:set var="numberOfUsers" value="${numberOfUsers}" scope="page" />
+                <p>There are ${numberOfUsers} registered users.</p>
                 <c:if test="${empty username}">
                 <p><a class="btn btn-primary btn-lg" href="login" role="button">Get started !</a> or <a href="register" role="button">Sign-up</a></p>
                 </c:if>
@@ -62,7 +64,11 @@
                     <tbody>
                     <c:forEach items="${items}" var="item">
                         <tr>
-                            <td><c:out value="${item.name}"/></td>
+                            <td>
+                                <a href="${pageContext.servletContext.contextPath}/item-details?idItem=${item.id}">
+                                    <span class="glyphicon glyphicon-info-sign"></span>
+                                </a>
+                            </td>
                             <td><c:out value="${item.description}"/></td>
                             <td><c:out value="€${item.price}"/></td>
                             <td><c:out value="${item.type}"/></td>

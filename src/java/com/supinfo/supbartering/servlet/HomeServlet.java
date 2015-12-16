@@ -8,6 +8,7 @@ package com.supinfo.supbartering.servlet;
 import com.sun.faces.action.RequestMapping;
 import com.supinfo.supbartering.entity.Item;
 import com.supinfo.supbartering.service.ItemService;
+import com.supinfo.supbartering.service.UserService;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -29,7 +30,7 @@ public class HomeServlet extends HttpServlet {
 
     @EJB
     private ItemService itemService;
-
+    private UserService userService;
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
@@ -76,7 +77,9 @@ public class HomeServlet extends HttpServlet {
         }
 
         if ( session.getAttribute("user") == null ) {
+            //Integer numberOfUsers = userService.countNumberOfUser();
             List<Item> allItems = itemService.getAllItems();
+            //request.setAttribute("numberOfUsers", numberOfUsers);
             request.setAttribute("items", allItems);
             this.getServletContext().getRequestDispatcher("/jsp/home.jsp").forward(request, response);
         }

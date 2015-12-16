@@ -20,4 +20,5 @@ public interface UserDao {
     public User findUserById(Long idUser);
     public User findUserByUsername(String username);
     public User getUserConnection(String username, String password);
+    public Integer countNumberOfUser();
 }

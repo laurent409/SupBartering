@@ -59,7 +59,7 @@
                         <h5>Type : <c:out value="${itemDetails.type}"/></h5>
                         <h5>Created date : <c:out value="${itemDetails.dateCreation}"/></h5>
                         <p>
-                            <a href="${pageContext.servletContext.contextPath}/admin" class="btn btn-success" role="button">
+                            <a href="${pageContext.servletContext.contextPath}/home" class="btn btn-success" role="button">
                                 <span class="glyphicon glyphicon-chevron-left"></span> Back
                             </a>
                             <c:if test="${sessionScope.user.id eq itemDetails.idCreator}">

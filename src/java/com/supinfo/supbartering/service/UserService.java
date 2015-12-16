@@ -40,4 +40,8 @@ public class UserService {
         return userDao.getUserConnection(username, password);
     }
     
+    public Integer countNumberOfUser() {
+        return userDao.countNumberOfUser();
+    }
+    
 }

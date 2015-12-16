@@ -68,7 +68,7 @@
                     <c:forEach items="${allItems}" var="item">
                         <tr>
                             <td>
-                                <a href="${pageContext.servletContext.contextPath}/admin/item-details?idItem=${item.id}">
+                                <a href="${pageContext.servletContext.contextPath}/item-details?idItem=${item.id}">
                                     <span class="glyphicon glyphicon-info-sign"></span>
                                 </a>
                                 <c:out value="${item.name}"/>                            
@@ -117,7 +117,7 @@
                         </c:url>                        
                         <tr>
                             <td>
-                                <a href="${pageContext.servletContext.contextPath}/admin/item-details?idItem=${item.id}">
+                                <a href="${pageContext.servletContext.contextPath}/item-details?idItem=${item.id}">
                                     <span class="glyphicon glyphicon-info-sign"></span>
                                 </a>
                                 <c:out value="${item.name}"/>                            
