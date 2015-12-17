@@ -10,4 +10,11 @@
         <welcome-file>home.jsp</welcome-file>
         <welcome-file>jsp/home.jsp</welcome-file>
     </welcome-file-list>
+    <context-param> 
+        <description>Location to store uploaded file</description> 
+        <param-name>file-upload</param-name> 
+        <param-value>
+             \Users\Laurent\Documents\pictures_supBartering
+         </param-value> 
+    </context-param>    
 </web-app>

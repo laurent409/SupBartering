@@ -41,7 +41,7 @@ public class RegisterServlet extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session = request.getSession();
         if ( session.getAttribute("user") == null ) 
-            this.getServletContext().getRequestDispatcher("/jsp/login.jsp").forward(request, response);
+            this.getServletContext().getRequestDispatcher("/jsp/register.jsp").forward(request, response);
         else
             response.sendRedirect("admin");        
     }
