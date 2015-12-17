@@ -1,0 +1,8 @@
+com.supinfo.supbartering.dao
+com.supinfo.supbartering.dao.jpa
+com.supinfo.supbartering.entity
+com.supinfo.supbartering.filter
+com.supinfo.supbartering.resource
+com.supinfo.supbartering.service
+com.supinfo.supbartering.servlet
+org.netbeans.rest.application.config

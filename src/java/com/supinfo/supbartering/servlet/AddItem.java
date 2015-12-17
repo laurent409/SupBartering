@@ -14,6 +14,8 @@ import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +23,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
@@ -116,19 +119,47 @@ public class AddItem extends HttpServlet {
             ServletFileUpload upload = new ServletFileUpload(factory);
             upload.setSizeMax(50 * 1024);
             
+            try{ 
+                // Parse the request to get file items.
+                List fileItems = upload.parseRequest(request);
+
+                // Process the uploaded file items
+                Iterator i = fileItems.iterator();
+                while ( i.hasNext () ) {
+                    FileItem fi = (FileItem)i.next();
+                    if ( !fi.isFormField () ) {
+                    //String fieldName = fi.getFieldName();
+                    String fileName = fi.getName();
+                    //String contentType = fi.getContentType();
+                    //boolean isInMemory = fi.isInMemory();
+                    //long sizeInBytes = fi.getSize();
+                    File file;
+                    String filePath = null;
+                    if( fileName.lastIndexOf("\\") >= 0 ){
+                        file = new File( filePath + fileName.substring( fileName.lastIndexOf("\\"))) ;
+                    }else{
+                        file = new File( filePath + fileName.substring(fileName.lastIndexOf("\\")+1)) ;
+                    }
+                    fi.write( file ) ;
+                    pictureObject = filePath+fileName;
+                    System.out.println("Uploaded Filename: " + fileName + "<br>");
+                    }
+                }
+            } catch(Exception ex) {
+                System.out.println("Error : " + ex);
+            }
         }
         */
         
         if ( nameObject != null 
                 && descriptionObject != null 
-                && typeObject != null
-                && pictureObject != null ) {
+                && typeObject != null ) {
             Item object = new Item();
             object.setName(nameObject);
             object.setDescription(descriptionObject);
             object.setPrice(priceObject);
             object.setType(typeObject);
-            object.setPicturePath(pictureObject);
+            //object.setPicturePath(pictureObject);
             object.setIdCreator(user.getId());
             object.setDateCreation(dateFormat.format(date));
             

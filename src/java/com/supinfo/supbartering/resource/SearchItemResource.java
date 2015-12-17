@@ -27,10 +27,10 @@ public class SearchItemResource {
     @EJB
     private ItemService itemService;
 
-    @GET
-    @Path("/{search}")
-    public List<Item> searchItemByString(@PathParam("query") String search) {
-        return itemService.searchItemByString(search);
+    @GET 
+    @Path("/{stringForSearching}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Item> search(@PathParam("stringForSearching") String stringForSearching) {
+        return itemService.searchItemByString(stringForSearching);
     }
-
 }
