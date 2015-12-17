@@ -110,6 +110,7 @@ public class AddItem extends HttpServlet {
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         Date date = new Date();
 
+        /*
         Boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if ( isMultipart ) {
             DiskFileItemFactory factory = new DiskFileItemFactory();
@@ -148,17 +149,17 @@ public class AddItem extends HttpServlet {
                 System.out.println("Error : " + ex);
             }
         }
+        */
         
         if ( nameObject != null 
                 && descriptionObject != null 
-                && typeObject != null
-                && pictureObject != null ) {
+                && typeObject != null ) {
             Item object = new Item();
             object.setName(nameObject);
             object.setDescription(descriptionObject);
             object.setPrice(priceObject);
             object.setType(typeObject);
-            object.setPicturePath(pictureObject);
+            //object.setPicturePath(pictureObject);
             object.setIdCreator(user.getId());
             object.setDateCreation(dateFormat.format(date));
             

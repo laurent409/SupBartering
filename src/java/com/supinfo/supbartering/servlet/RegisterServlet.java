@@ -64,9 +64,13 @@ public class RegisterServlet extends HttpServlet {
         user.setLastName(request.getParameter("lastName"));
         user.setPostalCode(Integer.parseInt(request.getParameter("postalCode")));
         user.setPassword(request.getParameter("password"));
-        
-        userService.addUser(user);
-        
-        response.sendRedirect(getServletContext().getContextPath() + "/login");        
+
+        User userCheck = userService.finUserByUsername(user.getUserName());
+        if (userCheck.getUserName() != null) {
+            userService.addUser(user); 
+            response.sendRedirect(getServletContext().getContextPath() + "/login");        
+        } else {
+            response.sendRedirect(getServletContext().getContextPath() + "/register");        
+        }
     }
 }
