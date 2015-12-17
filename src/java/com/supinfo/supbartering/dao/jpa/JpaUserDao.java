@@ -50,11 +50,28 @@ public class JpaUserDao implements UserDao
 
     @Override
     public User findUserByUsername(String username) {
+        /*
         try {
             return em.find(User.class, username);
         } catch (Exception e) {
             return null;
         }
+        */
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> query = cb.createQuery(User.class);
+        Root<User> user = query.from(User.class);
+        List<Predicate> predicate = new ArrayList<>();
+        
+        if ( username != null )
+            predicate.add(cb.equal(user.get(User_.userName), username));
+        
+        query.where(predicate.toArray(new Predicate[predicate.size()]));
+        
+        try {
+            return em.createQuery(query).getSingleResult();
+        } catch (Exception e) {
+            return null;
+        }         
     }
 
     @Override

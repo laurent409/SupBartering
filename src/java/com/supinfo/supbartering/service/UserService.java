@@ -33,7 +33,7 @@ public class UserService {
         return userDao.findUserById(idUser);
     }
     
-    public User finUserByUsername(String username) {
+    public User findUserByUsername(String username) {
         return userDao.findUserByUsername(username);
     }
     
