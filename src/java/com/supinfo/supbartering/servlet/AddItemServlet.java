@@ -32,7 +32,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
  * @author Laurent
  */
 @WebServlet(name = "AddObject", urlPatterns = {"/admin/add-object"})
-public class AddItem extends HttpServlet {
+public class AddItemServlet extends HttpServlet {
 
     @EJB
     private ItemService objectService;

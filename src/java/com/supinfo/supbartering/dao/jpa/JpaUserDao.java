@@ -44,7 +44,8 @@ public class JpaUserDao implements UserDao
         try {
             return em.find(User.class, idUser);
         } catch (Exception e) {
-            return null;
+            User user = new User();
+            return (User) user;
         }
     }
 
@@ -100,7 +101,8 @@ public class JpaUserDao implements UserDao
         try {
             return em.createQuery(query).getSingleResult();
         } catch (Exception e) {
-            return null;
+            User userNull = new User();
+            return (User) userNull;
         }            
     }
 

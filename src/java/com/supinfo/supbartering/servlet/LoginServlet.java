@@ -6,6 +6,7 @@
 package com.supinfo.supbartering.servlet;
 
 import com.supinfo.supbartering.entity.User;
+import com.supinfo.supbartering.form.LoginForm;
 import com.supinfo.supbartering.service.UserService;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -88,18 +89,30 @@ public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
+        /*
         String usernameLogin = request.getParameter("username");
         String passwordUser = request.getParameter("password");
         
         User user = new User();
-        if ( usernameLogin != null && passwordUser != null ) 
-           user = userService.getUserConnection(usernameLogin, passwordUser);
+        */
+        
+        LoginForm loginForm = new LoginForm();
+        
+        User userForm = loginForm.registerUser(request);
+        User user = new User();
+        if ( userForm.getUserName() != null && userForm.getPassword() != null ) 
+           user = userService.getUserConnection(userForm.getUserName(), userForm.getPassword());
         
         try {
             if (user.getId() != null) {
                 HttpSession session = request.getSession();
                 session.setAttribute("user", user);
+                
                 response.sendRedirect(getServletContext().getContextPath() + "/admin");        
+            } else {
+                String alreadyAdded = "This user doesn't exist !";
+                request.setAttribute("userDoesNotExist", alreadyAdded);
+                response.sendRedirect(getServletContext().getContextPath() + "/login");        
             }
         } catch (Exception e) {
             this.getServletContext().getRequestDispatcher("/jsp/login.jsp").forward(request, response);

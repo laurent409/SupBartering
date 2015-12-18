@@ -6,6 +6,7 @@
 package com.supinfo.supbartering.servlet;
 
 import com.supinfo.supbartering.entity.User;
+import com.supinfo.supbartering.form.RegisterForm;
 import com.supinfo.supbartering.service.UserService;
 import java.io.IOException;
 import javax.ejb.EJB;
@@ -57,6 +58,7 @@ public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        /*
         User user = new User();
         user.setMailAddress(request.getParameter("mail"));
         user.setUserName(request.getParameter("username"));
@@ -64,16 +66,34 @@ public class RegisterServlet extends HttpServlet {
         user.setLastName(request.getParameter("lastName"));
         user.setPostalCode(Integer.parseInt(request.getParameter("postalCode")));
         user.setPassword(request.getParameter("password"));
-
-        User userCheck = userService.findUserByUsername(user.getUserName());
+        */
+        RegisterForm registerForm = new RegisterForm();
         
-        String userNameUserCheck = userCheck.getUserName();
+        User user = registerForm.registerUser(request);
         
-        if (userCheck.getUserName() == null) {
-            userService.addUser(user);        
-            response.sendRedirect(getServletContext().getContextPath() + "/login");
-        } else {
+        if ( user.getMailAddress() != null
+                && user.getFirstName() != null
+                && user.getLastName() != null
+                && user.getPostalCode() != null
+                && user.getPassword() != null ) {
+            
+            User userCheck = userService.findUserByUsername(user.getUserName());
+            try {
+                //userService.findUserByUsername(user.getUserName());
+                if( userCheck == null ) {
+                    userService.addUser(user);
+                    request.setAttribute("form", registerForm);
+                    response.sendRedirect(getServletContext().getContextPath() + "/login");
+                } else {
+                    String alreadyAdded = "This user is already taken !";
+                    request.setAttribute("user", alreadyAdded);
+                    response.sendRedirect(getServletContext().getContextPath() + "/register");                
+                }
+            } catch ( Exception e ) {
+                response.sendRedirect(getServletContext().getContextPath() + "/register");                
+            }
+        } else 
             response.sendRedirect(getServletContext().getContextPath() + "/register");
-        }
+            
     }
 }

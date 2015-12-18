@@ -22,7 +22,7 @@ import javax.servlet.http.HttpSession;
  * @author Laurent
  */
 @WebServlet(name = "RemoveItem", urlPatterns = {"/admin/delete"})
-public class RemoveItem extends HttpServlet {
+public class RemoveItemServlet extends HttpServlet {
 
     @EJB
     private ItemService itemService;

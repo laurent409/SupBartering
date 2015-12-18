@@ -36,6 +36,7 @@
         <div class="container">
             <a href="home"><span class="glyphicon glyphicon-hand-left" style="max-width: 330px; padding-top: 10%; padding-left: 2%; margin: 0 auto;"> Back</span></a>
             <form method="POST" class="form-signin" style="max-width: 330px; padding: 4%; margin: 0 auto;">
+                <span class="error">${requestScope.userDoesNotExist}</span>
                 <h2 class="form-signin-heading">Sign-in</h2>
                 <label for="username" class="sr-only">Username</label>
                 <input type="text" class="form-control" id="username" name="username" value="" placeholder="username" required/>
