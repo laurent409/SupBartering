@@ -93,7 +93,7 @@ public class SettingsServlet extends HttpServlet {
         
         userService.updateUser(user);
         
-        response.sendRedirect(getServletContext().getContextPath() + "/settings");        
+        response.sendRedirect(getServletContext().getContextPath() + "/admin/settings");        
     }
 
     /**
