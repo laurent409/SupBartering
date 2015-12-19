@@ -3,29 +3,27 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/detailsObject.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/searchObject.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/entity/Item.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/form/LoginForm.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/register.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/home.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/login.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/AdminServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/LoginServlet.java</file>
-            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/build/generated-sources/ap-source-output/com/supinfo/supbartering/entity/User_.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/AddItemServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/entity/User.java</file>
-            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/DetailsItemServlet.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/form/RegisterForm.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/adminManage.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/service/ItemService.java</file>
-            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/AddItem.java</file>
+            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RemoveItemServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/WEB-INF/web.xml</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/SearchServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RegisterServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/SettingsServlet.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/web/jsp/confirmationDeleteItem.jsp</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/resource/SearchItemResource.java</file>
-            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/build/generated-sources/ap-source-output/com/supinfo/supbartering/entity/Item_.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/LogoutServlet.java</file>
-            <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/servlet/RemoveItem.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/ItemDao.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/dao/jpa/JpaUserDao.java</file>
             <file>file:/Users/Laurent/Supinfo/4JVA/WebApplication1/src/java/com/supinfo/supbartering/service/UserService.java</file>
