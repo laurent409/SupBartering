@@ -3,5 +3,5 @@
 
 Please use this URI for the beginning instead index path : 
 ```
-[[YOU URL]]/home
+localhost:[[your default port]]/WebApplication/home
 ```
